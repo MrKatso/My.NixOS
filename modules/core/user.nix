@@ -12,5 +12,5 @@
     ];
   };
   # Ainda nao sei para que serve
-  nix.settings.allowed-users = [ mr ];
+  nix.settings.allowed-users = [ "mr" ];
 }
