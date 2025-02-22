@@ -2,12 +2,17 @@
 
 {
   ## Keyboard main settings
+  # TTY keymap
+  console = {
+    useXkbConfig = true;
+  };
+  # X keymap
   services = {
     xserver = {
-      enable = true;
+      enable = false;
       xkb = {
         layout = "us";
-        variant = "altgr-intl";
+        variant = "intl";
       };
     };
   };
