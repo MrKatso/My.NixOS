@@ -12,7 +12,7 @@
       enable = false;
       xkb = {
         layout = "us";
-        variant = "intl";
+        variant = "altgr-intl";
       };
     };
   };
