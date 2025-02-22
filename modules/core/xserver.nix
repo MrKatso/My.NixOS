@@ -4,7 +4,7 @@
   ## Keyboard main settings
   services = {
     xserver = {
-      # enable = false;
+      enable = true;
       xkb = {
         layout = "us";
         variant = "altgr-intl";
