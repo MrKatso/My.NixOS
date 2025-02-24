@@ -7,14 +7,15 @@
   services.code-server = {
     enable = true;
     user = "mr";
-    group = "wheel";
+    group = "users";
     auth = "password";
-    # host = "192.168.0.99";
+    host = "192.168.0.99";
     port = 4444;
     disableTelemetry = true;
     disableWorkspaceTrust = true;
-    # disableUpdateCheck = true;
-    # disableFileDownloads = true;
+    disableUpdateCheck = true;
+    disableFileDownloads = true;
+    disableGettingStartedOverride = true;
   };
 
   # --------------------------- #
