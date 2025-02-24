@@ -23,4 +23,12 @@
       # AllowGroups = [ "networkmanager" "wheel" ];
     };
   };
+
+  # -------------------- #
+  # GNUPG SETUP SETTINGS #
+  # -------------------- #
+  programs.gnupg.agent = {
+    enable = true;
+    enableSSHSupport = true;
+  };
 }
