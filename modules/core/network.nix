@@ -9,6 +9,7 @@
       enable = true;
       allowedTCPPorts = [
         22
+        1836
       ];
       # allowedUDPPorts = [];
     };
