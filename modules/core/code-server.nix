@@ -8,7 +8,7 @@
     enable = true;
     user = "mr";
     group = "users";
-    auth = "none";
+    auth = "password";
     port = 1836;
     disableTelemetry = true;
     disableWorkspaceTrust = true;
