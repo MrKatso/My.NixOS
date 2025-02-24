@@ -8,7 +8,7 @@
     enable = true;
     user = "mr";
     group = "wheel";
-    auth = "none";
+    auth = "password";
     host = "192.168.0.99";
     port = 1836;
     disableTelemetry = true;
