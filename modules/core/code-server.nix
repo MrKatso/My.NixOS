@@ -9,13 +9,11 @@
     user = "mr";
     group = "wheel";
     auth = "password";
-    host = "192.168.0.99";
-    port = 1836;
+    port = 4444;
     disableTelemetry = true;
     disableWorkspaceTrust = true;
-    disableUpdateCheck = true;
-    disableFileDownloads = true;
-    disableGettingStartedOverride = true;
+    # disableUpdateCheck = true;
+    # disableFileDownloads = true;
   };
 
   # --------------------------- #
