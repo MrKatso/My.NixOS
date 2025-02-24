@@ -9,7 +9,7 @@
     user = "mr";
     group = "wheel";
     auth = "password";
-    host = "192.168.0.99";
+    # host = "192.168.0.99";
     port = 4444;
     disableTelemetry = true;
     disableWorkspaceTrust = true;
