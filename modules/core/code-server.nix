@@ -7,7 +7,7 @@
   services.code-server = {
     enable = true;
     user = "mr";
-    group = "users";
+    group = "wheel";
     auth = "password";
     port = 1836;
     disableTelemetry = true;
