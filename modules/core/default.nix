@@ -1,4 +1,4 @@
-{ self, nixpkgs, ... }:
+{ self, nixpkgs, hostnm, usernm, ... }:
 
 {
   # -------------------------------------- #

@@ -10,6 +10,7 @@
 
   outputs = { self, nixpkgs, ... }:
   let
+    usernm = "mr";
     lib = nixpkgs.lib;
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
@@ -18,6 +19,10 @@
       vm = nixpkgs.lib.nixosSystem {
         inherit system;
         modules = [ ./hosts/vm ];
+        specialArgs = {
+          hostnm = "FSociety";
+          inherit self usernm;
+        };
       };
     };
   };
