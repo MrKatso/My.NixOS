@@ -1,12 +1,16 @@
-{ pkgs, ... }:
+{ pkgs, usernm, ... }:
 
 {
-  ## Keyboard main settings
-  # TTY keymap
+  # ------------------- #
+  # TTY KEYMAP SETTINGS #
+  # ------------------- #
   console = {
-    useXkbConfig = true;
+    keyMap = "us-acentos";
   };
-  # X keymap
+
+  # ---------------- #
+  # X11 ALL SETTINGS #
+  # ---------------- #
   services = {
     xserver = {
       enable = false;
@@ -16,4 +20,18 @@
       };
     };
   };
+
+  # ---------------------- #
+  # INPUT DEVICES SETTINGS #
+  # ---------------------- #
+  services = {
+    libinput = {
+      enable = true;
+    };
+  };
+
+  # ------------------------------------ #
+  # TO PREVENT GETTING STUCK AT SHUTDOWN #
+  # ------------------------------------ #
+  systemd.extraConfig = "DefaultTimeoutStopSec=10s";
 }
