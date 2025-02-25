@@ -1,12 +1,14 @@
 { self, nixpkgs, ... }:
 
 {
+  # -------------------------------------- #
+  # MASTER IMPORTS FOR CORE SYSTEM MODULES #
+  # -------------------------------------- #
   imports = [
     ./bootloader.nix
     ./network.nix
-    ./user.nix
-    ./code-server.nix
     ./system.nix
+    ./user.nix
     ./xserver.nix
   ];
 }

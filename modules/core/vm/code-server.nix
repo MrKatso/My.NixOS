@@ -22,6 +22,6 @@
   # CODE-SERVER PACKAGE INSTALL #
   # --------------------------- #
   environment.systemPackages = with pkgs; [
-    pkgs.code-server
+    code-server
   ];
 }

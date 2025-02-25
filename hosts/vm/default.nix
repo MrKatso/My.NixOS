@@ -6,6 +6,7 @@
   # ------------------------- #
   imports = [
     ./hardware-configuration.nix
+    ./../../modules/core/vm/code-server.nix
     ./../../modules/core
   ];
 
@@ -19,8 +20,6 @@
     settings = {
       PasswordAuthentication = true;
       PermitRootLogin = "yes";
-      # AllowUsers = [ "mr" ];
-      # AllowGroups = [ "networkmanager" "wheel" ];
     };
   };
 
