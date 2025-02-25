@@ -1,19 +1,31 @@
-{ pkgs, ... }:
+{ pkgs, hostnm, ... }:
 
 {
-  ## Network main settings
+  # ---------------------- #
+  # NETWORK SETUP SETTINGS #
+  # ---------------------- #
   networking = {
-    hostName = "FSociety";
+    hostName = "${hostnm}";
     networkmanager.enable = true;
+    nameservers = [
+      "8.8.8.8"
+      "8.8.4.4"
+      "1.1.1.1"
+    ];
     firewall = {
       enable = true;
       allowedTCPPorts = [
         22
         4444
       ];
-      # allowedUDPPorts = [];
+      allowedUDPPorts = [
+
+      ];
     };
   };
-  # Other packages
+  
+  # ------------------------ #
+  # NETWORK PACKAGES INSTALL #
+  # ------------------------ #
   environment.systemPackages = with pkgs; [ networkmanagerapplet ];
 }
