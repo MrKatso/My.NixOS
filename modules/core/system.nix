@@ -1,9 +1,12 @@
 { self, pkgs, lib, ... }:
 
 {
-  ## Flake init:
+  # --------------------------- #
+  # MASTER FLAKE INIT ON SYSTEM #
+  # --------------------------- #
   nix = {
     settings = {
+      auto-optimise-store = true;
       experimental-features = [
         "nix-command"
         "flakes"
@@ -11,17 +14,22 @@
     };
   };
 
-  ## Main packages:
+  # --------------------------------- #
+  # BASE SYSTEM PACKAGES AND SETTINGS #
+  # --------------------------------- #
+  nixpkgs.config.allowUnfree = true;
   environment.systemPackages = with pkgs; [
     wget
     curl
     git
   ];
 
-  ## Main system settings:
-  # Location settings
+  # ------------------------------- #
+  # SYSTEM LOCALE AND DATA SETTINGS #
+  # ------------------------------- #
   time.timeZone = "America/Sao_Paulo";
   i18n.defaultLocale = "pt_BR.UTF-8";
+
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "pt_BR.UTF-8";
     LC_IDENTIFICATION = "pt_BR.UTF-8";
@@ -33,8 +41,10 @@
     LC_TELEPHONE = "pt_BR.UTF-8";
     LC_TIME = "pt_BR.UTF-8";
   };
-  # System major settings
-  nixpkgs.config.allowUnfree = true;
+
+  # ------------------------------------- #
+  # SYSTEM VERSION AND TEMPORARY SETTINGS #
+  # ------------------------------------- #
   virtualisation.vmware.guest.enable = true;
   system.stateVersion = "24.11";
 }

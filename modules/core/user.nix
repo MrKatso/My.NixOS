@@ -1,16 +1,20 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, usernm, hostnm, ... }:
 
 {
-  ## Main users
-  # MR (Mr.Robot)
-  users.users.mr = {
+  # --------------------------------------------- #
+  # MAIN FINAL USER FOR THIS SYSTEM CONFIGURATION #
+  # --------------------------------------------- #
+  users.users.${usernm} = {
     isNormalUser = true;
-    description = "Mr.Katso";
+    description = "${usernm}";
     extraGroups = [
       "networkmanager"
       "wheel"
     ];
   };
-  # Ainda nao sei para que serve
-  nix.settings.allowed-users = [ "mr" ];
+
+  # ------------------------ #
+  # AND SYSTEM ALLOWED USERS #
+  # ------------------------ #
+  nix.settings.allowed-users = [ "${usernm}" ];
 }
