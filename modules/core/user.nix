@@ -1,4 +1,4 @@
-{ pkgs, usernm, hostnm, ... }:
+{ config, pkgs, usernm, hostnm, ... }:
 
 {
   # --------------------------------------------- #
@@ -11,6 +11,17 @@
       "networkmanager"
       "wheel"
     ];
+  };
+
+  # --------------- #
+  # AUTOMATED LOGIN #
+  # --------------- #
+  systemd.services.getty@tty1 = {
+    enable = true;
+    serviceConfig.ExecStart = "${pkgs.systemd}/bin/systemd-getty@tty1.service";
+    environment = {
+      USER = "mr";
+    };
   };
 
   # ------------------------ #
