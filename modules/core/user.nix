@@ -16,13 +16,7 @@
   # --------------- #
   # AUTOMATED LOGIN #
   # --------------- #
-  systemd.services.getty@tty1 = {
-    enable = true;
-    serviceConfig.ExecStart = "${pkgs.systemd}/bin/systemd-getty@tty1.service";
-    environment = {
-      USER = "mr";
-    };
-  };
+  services.getty.autologinUser = "${usernm}";
 
   # ------------------------ #
   # AND SYSTEM ALLOWED USERS #
