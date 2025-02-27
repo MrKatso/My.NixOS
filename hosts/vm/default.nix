@@ -5,9 +5,10 @@
   # MASTER VMs SYSTEM IMPORTS #
   # ------------------------- #
   imports = [
-    ./hardware-configuration.nix
     ./../../modules/core/vm/code-server.nix
+    ./../../modules/core/vm/user-login.nix
     ./../../modules/core
+    ./hardware-configuration.nix
   ];
 
   # ------------------ #
