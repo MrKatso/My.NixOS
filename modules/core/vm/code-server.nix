@@ -1,10 +1,12 @@
+{ pkgs, usernm, ... }:
+
 {
   # -------------------------- #
   # CODE-SERVER SETUP SETTINGS #
   # -------------------------- #
   services.code-server = {
     enable = true;
-    user = "mr";
+    user = "${usernm}";
     group = "users";
     auth = "password";
     host = "192.168.0.99";

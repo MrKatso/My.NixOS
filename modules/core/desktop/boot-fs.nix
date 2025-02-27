@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   # ------------------------ #
   # BOOT FILESYSTEMS OPTIONS #
