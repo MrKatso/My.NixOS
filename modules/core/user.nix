@@ -1,4 +1,4 @@
-{ config, pkgs, usernm, hostnm, ... }:
+{ usernm, hostnm, ... }:
 
 {
   # --------------------------------------------- #
@@ -12,11 +12,6 @@
       "wheel"
     ];
   };
-
-  # --------------- #
-  # AUTOMATED LOGIN #
-  # --------------- #
-  services.getty.autologinUser = "${usernm}";
 
   # ------------------------ #
   # AND SYSTEM ALLOWED USERS #
