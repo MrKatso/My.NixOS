@@ -10,12 +10,6 @@
     efi.canTouchEfiVariables = true;
   };
 
-  # ------------------------ #
-  # BOOT FILESYSTEMS OPTIONS #
-  #    IN DUAL BOOT ONLY     #
-  # ------------------------ #
-  boot.supportedFilesystems = [ "ntfs" ];
-
   # --------------------- #
   # KERNEL SYSTEM OPTIONS #
   # --------------------- #
