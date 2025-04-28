@@ -6,6 +6,7 @@
   # --------------------------------------------- #
   users.users.${usernm} = {
     isNormalUser = true;
+    initialPassword = "1234";
     description = "${usernm}";
     extraGroups = [
       "networkmanager"
