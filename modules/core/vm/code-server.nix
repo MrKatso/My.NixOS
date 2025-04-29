@@ -9,7 +9,7 @@
     user = "${usernm}";
     group = "users";
     auth = "password";
-    host = "192.168.0.99";
+    host = "0.0.0.0";
     port = 4444;
     disableTelemetry = true;
     disableWorkspaceTrust = true;
