@@ -6,31 +6,31 @@
 {
   imports = [ ];
 
-  boot.initrd.availableKernelModules = [ "ata_piix" "uhci_hcd" "ehci_pci" "ahci" "nvme" "sr_mod" ];
+  boot.initrd.availableKernelModules = [ "ata_piix" "uhci_hcd" "ehci_pci" "ahci" "xhci_pci" "nvme" "sr_mod" ];
   boot.initrd.kernelModules = [ "dm-snapshot" "amdgpu" ];
   boot.kernelModules = [ ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" =
-    { device = "/dev/disk/by-uuid/2582c079-625f-45d0-a7d5-fd5fb46e80f5";
+    { device = "/dev/disk/by-uuid/baa2d395-b20e-4e04-85d3-2db4dd48f80e";
       fsType = "btrfs";
-      options = [ "subvol=@/root" ];
+      options = [ "subvol=@" "noatime" "compress=zstd" ];
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/2582c079-625f-45d0-a7d5-fd5fb46e80f5";
+    { device = "/dev/disk/by-uuid/baa2d395-b20e-4e04-85d3-2db4dd48f80e";
       fsType = "btrfs";
-      options = [ "subvol=@/home" ];
+      options = [ "subvol=@home" "noatime" "compress=zstd" ];
     };
 
   fileSystems."/nix" =
-    { device = "/dev/disk/by-uuid/2582c079-625f-45d0-a7d5-fd5fb46e80f5";
+    { device = "/dev/disk/by-uuid/baa2d395-b20e-4e04-85d3-2db4dd48f80e";
       fsType = "btrfs";
-      options = [ "subvol=@/nix" ];
+      options = [ "subvol=@nix" ];
     };
 
   fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/BD8E-41D6";
+    { device = "/dev/disk/by-uuid/CCEB-650B";
       fsType = "vfat";
       options = [ "fmask=0022" "dmask=0022" ];
     };
@@ -42,7 +42,7 @@
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
   networking.useDHCP = lib.mkDefault true;
-  # networking.interfaces.ens33.useDHCP = lib.mkDefault true;
+  # networking.interfaces.ens36.useDHCP = lib.mkDefault true;
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }
