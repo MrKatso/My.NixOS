@@ -3,7 +3,7 @@
 {
   hardware.graphics = {
     enable = true;
-    enable32bits = true;
+    enable32Bit = true;
   };
 
   hardware.graphics.extraPackages = with pkgs; [
