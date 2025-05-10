@@ -19,7 +19,7 @@
   };
 
   environment.systemPackages = with pkgs; [
-    sway;
-    greetd.greetd;
+    sway
+    greetd.greetd
   ];
 }
