@@ -5,4 +5,8 @@
     enable = true;
     wrapperFeatures.gtk = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    sway;
+  ];
 }
