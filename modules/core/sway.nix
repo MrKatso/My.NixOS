@@ -1,4 +1,4 @@
-{ config, pkgs, lib, usernm ... }:
+{ config, pkgs, lib, usernm, ... }:
 
 {
   programs.sway = {
@@ -13,7 +13,7 @@
     settings = {
       default_session = {
         command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd sway";
-        user = {"${usernm}"};
+        user = "${usernm}";
       };
     };
   };
