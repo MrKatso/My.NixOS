@@ -7,6 +7,7 @@
   imports = [
     ./bootloader.nix
     ./network.nix
+    ./sway.nix
     ./system.nix
     ./user.nix
     ./xserver.nix
