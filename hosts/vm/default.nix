@@ -6,7 +6,6 @@
   # ------------------------- #
   imports = [
     ./../../modules/core/vm/code-server.nix
-    ./../../modules/core/vm/user-login.nix
     ./../../modules/core
     ./hardware-configuration.nix
   ];
