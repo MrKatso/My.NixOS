@@ -1,8 +1,8 @@
-{ usernm, ... }:
+# { usernm, ... }:
 
-{
+#{
   # --------------- #
   # AUTOMATED LOGIN #
   # --------------- #
-  services.getty.autologinUser = "${usernm}";
-}
+  # services.getty.autologinUser = "${usernm}";
+#}
